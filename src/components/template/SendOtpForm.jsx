@@ -1,5 +1,5 @@
 import React from 'react';
-import { sendOtpMSG } from '../../services/auth';
+import { sendOtpMSG , checkOtpMSG } from '../../services/auth';
 
 const SendOtpForm = ({setMobile,mobile,setStep}) => {
     const submitHandler=async(event)=>{
@@ -21,7 +21,7 @@ const SendOtpForm = ({setMobile,mobile,setStep}) => {
                 <p>ورود به حساب کاربری</p>
                 <span>لطفا شماره موبایل خود را وارد کنید</span>
                 <label htmlFor="input">شماره موبایل</label>
-                <input type="text" id="input" value={mobile} onChange={(e)=>setMobile(e.target.value)} />
+                <input type="text" id="input" value={mobile} placeholder='شماره را وارد کنید' onChange={(e)=>setMobile(e.target.value)} />
                 <button type='submit'>ارسال</button>
             </form>
         </div>

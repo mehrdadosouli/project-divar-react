@@ -8,5 +8,13 @@ const sendOtpMSG=async(mobile)=>{
         return {error}
     }
 }
+const checkOtpMSG=async(mobile,code)=>{
+    try{
+        const response = await api.post("auth/check-otp",{ mobile , code })
+        return { response }
+    }catch (error) {
+        return {error}
+    }
+}
 
-export { sendOtpMSG }
+export { sendOtpMSG , checkOtpMSG }
