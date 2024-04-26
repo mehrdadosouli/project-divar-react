@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import NotFound from 'src/pages/404';
@@ -5,8 +6,12 @@ import AdminPage from 'src/pages/AdminPage';
 import AuthPage from 'src/pages/AuthPage';
 import DashboardPage from 'src/pages/DashboardPage';
 import HomePage from 'src/pages/HomePage';
+import { getProfileUser } from 'src/services/user';
 
-const Router = () => {
+const Routers = () => {
+
+    const {data,isLoading,error}=useQuery(["profile"],getProfileUser)
+    // console.log('data',data);
     return (
         <>
             <Routes>
@@ -21,4 +26,4 @@ const Router = () => {
     );
 };
 
-export default Router;
+export default Routers;

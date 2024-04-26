@@ -7,4 +7,8 @@ const cookies=(token)=>{
     }`;
 }
 
-export {cookies}
+const getCookie=(cookieName)=>{
+   return document.cookie.split(';').find(i=>i.trim().split('=')[0] === cookieName)?.split('=')[1]
+}
+
+export {cookies ,getCookie}

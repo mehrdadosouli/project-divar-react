@@ -1,15 +1,16 @@
 import { BrowserRouter } from "react-router-dom"
-import Router from "./routes/Router"
+import Routers from "./routes/Router"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-import reactQuery from "./config/reactQuery"
 import defaultOptions from "./config/reactQuery"
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 
 function App() {
 const queryClient=new QueryClient({defaultOptions})
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <Router />
+        <Routers />
+        <ReactQueryDevtools />
       </BrowserRouter>
     </QueryClientProvider>
   )
