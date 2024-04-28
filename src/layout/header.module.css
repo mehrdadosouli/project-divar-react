@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    font-weight: 700;
+}
+.right_header,.left_header{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.logo,.location{
+    display: flex;
+    gap:1rem;
+    align-items: center;
+}
+.btn{
+    padding: 1rem;
+    background-color: brown;
+    color: white;
+    border-radius: 1rem;
+}
