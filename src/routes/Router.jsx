@@ -22,7 +22,6 @@ const Routers = () => {
                 <Route path="dashboard" element={data? <DashboardPage /> : <Navigate to="/auth" />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
-          
         </>
     );
 };
