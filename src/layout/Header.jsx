@@ -19,7 +19,7 @@ const Header = () => {
             <div className={styles.left_header}>
                 <div className={styles.logo}>
                     <FaRegUser />
-                    <Link to="/auth">دیوار من</Link>
+                    <Link to="/admin">دیوار من</Link>
                 </div>
                 <Link to="/dashboard"><button className={styles.btn}>ثبت آگهی</button></Link>
             </div>
