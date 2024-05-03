@@ -11,13 +11,12 @@ import { getProfileUser } from 'src/services/user';
 
 const Routers = () => {
     const {data,isLoading,error}=useQuery(["profile"],getProfileUser)
-    console.log('data',data,isLoading);
     if(isLoading) return (<div style={{width:'100%',height:'100vh',display:'flex',justifyContent:'center',alignItems:'center'}}><Loader /></div>)
     return (
         <>
             <Routes>
                 <Route index element={<HomePage />} />
-                <Route path="auth" element={data? <Navigate to="/dashboard" /> : <AuthPage />} />
+                <Route path="auth" element={data ? <Navigate to="/dashboard" /> : <AuthPage />} />
                 <Route path="admin" element={data && data?.data.role === 'ADMIN' ? (<AdminPage />) : (<Navigate to="/" />)} />
                 <Route path="dashboard" element={data? <DashboardPage /> : <Navigate to="/auth" />} />
                 <Route path="*" element={<NotFound />} />

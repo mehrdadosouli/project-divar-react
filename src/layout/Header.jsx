@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../public/divar.svg'
+import logo from '../../public/divar.svg'
 import { CiLocationOn } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa";
 import { Link } from 'react-router-dom'
